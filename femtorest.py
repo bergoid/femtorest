@@ -180,7 +180,7 @@ class RESTRequestHandler(http.server.BaseHTTPRequestHandler):
                     else:
                         self.send_response(405)
                         self.end_headers()
-                        self.wfile.write(method + ' is not supported\n'.encode())
+                        self.wfile.write((method + ' is not supported\n').encode())
 
     def get_route(self):
         for path, route in self.routes.items():
